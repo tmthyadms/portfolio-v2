@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Jobzone",
+    "subtitle": "DevHack 2023",
+    "description": "An employment website to evaluate fraudulent job posting using machine learning.",
+    "image": "projects/jobzone.svg",
+    "to": "https://github.com/tmthyadms/jobzone"
+  },
+  {
+    "title": "LockNRoll",
+    "subtitle": "Bachelor's Final Year Project",
+    "description": "A home security mobile app to control a custom-built smart door lock using Firebase services.",
+    "image": "projects/locknroll.png",
+    "to": "https://github.com/tmthyadms/locknroll"
+  },
+  {
+    "title": "EyeBuddy",
+    "subtitle": "Apps Innovation Challenge (AIC) 2022",
+    "description": "A mobile app to detect dry eyes' syndromes using convolutional neural network (CNN).",
+    "image": "projects/eyebuddy.png",
+    "to": ""
+  },
+  {
+    "title": "Digital Portfolio",
+    "subtitle": "",
+    "description": "A website to showcase my works and skills.",
+    "image": "projects/portfolio-light.png",
+    "to": "https://github.com/tmthyadms/portfolio"
+  },
+  {
+    "title": "Sentinel",
+    "subtitle": "",
+    "description": "An online assessment website to proctor students using neural network.",
+    "image": "projects/sentinel.png",
+    "to": "https://github.com/tmthyadms/sentinel"
+  }
+]

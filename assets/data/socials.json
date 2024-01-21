@@ -1,0 +1,12 @@
+[
+  {
+    "name": "LinkedIn",
+    "to": "https://www.linkedin.com/in/tmthyadms",
+    "icon": "mdi:linkedin"
+  },
+  {
+    "name": "GitHub",
+    "to": "https://github.com/tmthyadms",
+    "icon": "mdi:github"
+  }
+]

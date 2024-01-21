@@ -1,0 +1,57 @@
+@layer tailwind-base {
+  @tailwind base;
+
+  @layer base {
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      @apply bg-surface;
+    }
+  }
+}
+
+@layer tailwind-utilities {
+  @font-face {
+    font-family: "Shadows Into Light";
+    src: url("@/assets/fonts/ShadowsIntoLight-Regular.ttf") format("truetype");
+  }
+
+  @tailwind components;
+  @tailwind utilities;
+
+  @layer components {
+    .p-button {
+      @apply gap-2;
+    }
+
+    .skeleton {
+      @apply h-4 w-full animate-pulse rounded bg-surface-d;
+    }
+  }
+
+  @layer utilities {
+    .p-button-sm {
+      @apply h-8 px-3;
+    }
+
+    .p-button-sm.p-button-square {
+      @apply h-8 w-8 p-0;
+    }
+
+    .mask {
+      mask-size: contain;
+      mask-repeat: no-repeat;
+      mask-position: center;
+    }
+
+    .mask-squircle {
+      mask-image: url("@/assets/images/mask-squircle.svg");
+    }
+
+    .app-ring {
+      @apply ring-1 ring-gray-200 dark:ring-gray-800;
+    }
+  }
+}

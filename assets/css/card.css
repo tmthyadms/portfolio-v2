@@ -1,0 +1,15 @@
+.p-card {
+  @apply flex flex-col overflow-hidden;
+}
+
+:deep(.p-card-header) {
+  @apply px-4 pb-1 pt-5 sm:px-6 sm:pb-0 sm:pt-6;
+}
+
+:deep(.p-card-body) {
+  @apply flex flex-1 flex-col px-4 pb-5 sm:p-6;
+}
+
+:deep(.p-card-footer) {
+  @apply mt-auto;
+}
