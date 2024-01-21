@@ -41,6 +41,12 @@ const themeIcon = computed(() =>
 watch(isDark, () => {
   switchTheme();
 });
+onMounted(() => {
+  const DEFAULT_IS_DARK = "false";
+  const storageIsDark = localStorage.getItem("isDark") ?? DEFAULT_IS_DARK;
+  const userIsDark = JSON.parse(storageIsDark);
+  isDark.value = userIsDark;
+});
 function switchTheme() {
   const TAILWIND_DARK_CLASS = "dark";
   const html = document.documentElement;
@@ -53,6 +59,7 @@ function switchTheme() {
 
   if (isDark.value) html.classList.add(TAILWIND_DARK_CLASS);
   else html.classList.remove(TAILWIND_DARK_CLASS);
+  localStorage.setItem("isDark", JSON.stringify(isDark.value));
 }
 </script>
 
