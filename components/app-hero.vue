@@ -61,7 +61,7 @@ const isRightAligned = computed(() => props.align === "right");
 
 <style scoped>
 .hero {
-  @apply grid min-h-screen place-content-center;
+  @apply grid min-h-screen place-content-center py-8 sm:py-16;
 }
 
 .hero-container {
