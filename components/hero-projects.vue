@@ -14,6 +14,22 @@ const responsiveOptions = ref([
     numScroll: 1,
   },
 ]);
+enum Orientation {
+  Horizontal = "horizontal",
+  Vertical = "vertical",
+}
+const orientation: Ref<Orientation> = ref(Orientation.Horizontal);
+onMounted(() => {
+  const mobileMediaQuery = "not all and (min-width: 768px)";
+  const currentMedia = matchMedia(mobileMediaQuery);
+
+  updateOrientation(currentMedia);
+  currentMedia.addEventListener("change", updateOrientation);
+});
+function updateOrientation(mobileMedia: MediaQueryList | MediaQueryListEvent) {
+  const isMobile = mobileMedia.matches;
+  orientation.value = isMobile ? Orientation.Vertical : Orientation.Horizontal;
+}
 </script>
 
 <template>
@@ -34,6 +50,8 @@ const responsiveOptions = ref([
       :num-visible="4"
       :num-scroll="1"
       :responsive-options="responsiveOptions"
+      :orientation="orientation"
+      vertical-view-port-height="480px"
       :autoplay-interval="3000"
       circular
       class="max-w-80 sm:max-w-xl lg:max-w-screen-lg 2xl:max-w-screen-2xl"
