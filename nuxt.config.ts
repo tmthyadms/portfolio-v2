@@ -33,7 +33,6 @@ export default defineNuxtConfig({
         "Menubar",
         "Timeline",
         "ToggleButton",
-        "Skeleton",
       ],
     },
     directives: {
