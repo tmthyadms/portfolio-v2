@@ -1,9 +1,16 @@
 [
   {
+    "title": "Digital Portfolio v2",
+    "subtitle": "",
+    "description": "The revamped version of Digital Portfolio.",
+    "image": "projects/portfolio-v2.png",
+    "to": "https://github.com/tmthyadms/portfolio-v2"
+  },
+  {
     "title": "Jobzone",
     "subtitle": "DevHack 2023",
     "description": "An employment website to evaluate fraudulent job posting using machine learning.",
-    "image": "projects/jobzone.svg",
+    "image": "projects/jobzone.png",
     "to": "https://github.com/tmthyadms/jobzone"
   },
   {
