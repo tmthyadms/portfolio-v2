@@ -2,11 +2,11 @@
   {
     "name": "LinkedIn",
     "to": "https://www.linkedin.com/in/tmthyadms",
-    "icon": "mdi:linkedin"
+    "icon": "simple-icons:linkedin"
   },
   {
     "name": "GitHub",
     "to": "https://github.com/tmthyadms",
-    "icon": "mdi:github"
+    "icon": "simple-icons:github"
   }
 ]
