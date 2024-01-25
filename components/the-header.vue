@@ -27,11 +27,11 @@ onMounted(() => {
 const theme = {
   light: {
     name: "viva-light",
-    icon: "mdi:weather-sunny",
+    icon: "ph:sun-duotone",
   },
   dark: {
     name: "viva-dark",
-    icon: "mdi:weather-night",
+    icon: "ph:moon-duotone",
   },
 };
 const isDark = ref(false);
@@ -66,17 +66,24 @@ function switchTheme() {
 <template>
   <header
     id="header"
-    class="bg-surface-a/90 sticky top-0 z-[1] backdrop-blur transition-shadow duration-100"
+    class="sticky top-0 z-[1] bg-surface-a/90 backdrop-blur transition-shadow duration-100"
   >
     <prime-menubar :model="items" mobileActive>
       <template #start>
-        <app-logo
-          class="cursor-pointer transition-opacity duration-200 hover:opacity-60"
+        <div
           @click="scrollToTop"
-        />
+          class="flex cursor-pointer items-center gap-1.5 transition-opacity duration-200 hover:opacity-60"
+        >
+          <app-logo />
+          <icon
+            name="ph:circle-wavy-check-duotone"
+            size="1.25rem"
+            class="text-blue-400"
+          />
+        </div>
       </template>
       <template #menubuttonicon>
-        <icon name="mdi:menu" size="1.25rem" />
+        <icon name="mdi:menu" />
       </template>
       <template #end>
         <prime-toggle-button
@@ -125,7 +132,11 @@ function switchTheme() {
 }
 
 :deep(.p-menubar-end) {
-  @apply flex items-center gap-1.5 lg:ml-0;
+  @apply flex items-center gap-x-1.5 lg:ml-0;
+}
+
+.p-button {
+  @apply shadow-none;
 }
 
 .p-togglebutton {
