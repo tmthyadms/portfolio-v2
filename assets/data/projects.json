@@ -3,6 +3,7 @@
     "title": "Digital Portfolio v2",
     "subtitle": "",
     "description": "The revamped version of Digital Portfolio.",
+    "category": "Side Project",
     "image": "projects/portfolio-v2.png",
     "to": "https://github.com/tmthyadms/portfolio-v2"
   },
@@ -10,6 +11,7 @@
     "title": "Jobzone",
     "subtitle": "DevHack 2023",
     "description": "An employment website to evaluate fraudulent job posting using machine learning.",
+    "category": "Hackathon",
     "image": "projects/jobzone.png",
     "to": "https://github.com/tmthyadms/jobzone"
   },
@@ -17,6 +19,7 @@
     "title": "LockNRoll",
     "subtitle": "Bachelor's Final Year Project",
     "description": "A home security mobile app to control a custom-built smart door lock using Firebase services.",
+    "category": "Final Year Project",
     "image": "projects/locknroll.png",
     "to": "https://github.com/tmthyadms/locknroll"
   },
@@ -24,6 +27,7 @@
     "title": "EyeBuddy",
     "subtitle": "Apps Innovation Challenge (AIC) 2022",
     "description": "A mobile app to detect dry eyes' syndromes using convolutional neural network (CNN).",
+    "category": "Competition",
     "image": "projects/eyebuddy.png",
     "to": ""
   },
@@ -31,6 +35,7 @@
     "title": "Digital Portfolio",
     "subtitle": "",
     "description": "A website to showcase my works and skills.",
+    "category": "Side Project",
     "image": "projects/portfolio-light.png",
     "to": "https://github.com/tmthyadms/portfolio"
   },
@@ -38,6 +43,7 @@
     "title": "Sentinel",
     "subtitle": "",
     "description": "An online assessment website to proctor students using neural network.",
+    "category": "Side Project",
     "image": "projects/sentinel.png",
     "to": "https://github.com/tmthyadms/sentinel"
   }
