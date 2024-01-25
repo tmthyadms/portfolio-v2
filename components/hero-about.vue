@@ -39,7 +39,7 @@ onMounted(() => {
     </template>
     <template #links>
       <a v-ripple href="resume.pdf" target="_blank" class="p-ripple p-button">
-        <icon name="mdi:rocket-launch-outline" size="1.25rem" />
+        <icon name="ph:rocket-launch-duotone" size="1.25rem" />
         See resume
       </a>
       <span>or</span>
