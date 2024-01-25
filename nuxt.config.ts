@@ -28,6 +28,7 @@ export default defineNuxtConfig({
         "Button",
         "Card",
         "Carousel",
+        "Chip",
         "Divider",
         "Image",
         "Menubar",
