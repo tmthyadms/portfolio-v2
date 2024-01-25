@@ -3,17 +3,23 @@
     <app-card
       v-animateonscroll.once="{ enterClass: 'fadein', leaveClass: 'fadeout' }"
       once
-      icon="mdi:briefcase-account-outline"
+      icon="ph:briefcase-duotone"
       title="Frontend Support"
-      subtitle="Internship"
+      subtitle="Benefit Solutions Pte Ltd"
       class="duration-1000"
     >
       <template #content>
-        <ul class="list-inside list-disc text-[15px]">
-          <li>Resolved front-end issues.</li>
-          <li>Developed new components.</li>
-          <li>Built an end-to-end (E2E) automated testing.</li>
-        </ul>
+        <div class="space-y-1.5 text-[15px]">
+          <ul class="list-inside list-disc">
+            <li>Resolved front-end issues.</li>
+            <li>Developed new components.</li>
+            <li>Built an end-to-end (E2E) automated testing.</li>
+          </ul>
+          <p><time>Duration: 6 months</time></p>
+        </div>
+      </template>
+      <template #footer>
+        <app-chip label="Internship" />
       </template>
     </app-card>
   </app-hero>
