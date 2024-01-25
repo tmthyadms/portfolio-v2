@@ -1,9 +1,10 @@
 <script setup lang="ts">
 interface Props {
-  image: string;
   title: string;
   subtitle?: string;
   description: string;
+  category: string;
+  image: string;
   to?: string;
 }
 const props = defineProps<Props>();
@@ -13,6 +14,11 @@ const props = defineProps<Props>();
   <prime-card class="app-ring shadow">
     <template #header>
       <prime-image :src="props.image" alt="" size="64" preview />
+      <app-chip
+        :label="props.category"
+        severity="primary"
+        class="mx-4 mt-5 sm:mx-5 sm:mt-6"
+      />
     </template>
     <template #title>
       {{ props.title }}
@@ -24,8 +30,12 @@ const props = defineProps<Props>();
       <p class="text-[15px]">{{ props.description }}</p>
     </template>
     <template v-if="props.to" #footer>
-      <a v-ripple :href="props.to" target="_blank" class="p-ripple p-button"
-        >Learn more <icon name="mdi:arrow-right" size="1.25rem" />
+      <a
+        v-ripple
+        :href="props.to"
+        target="_blank"
+        class="p-ripple p-button p-button-sm p-button-secondary p-button-outlined"
+        ><icon name="ph:bookmark-simple-duotone" /> Learn more
       </a>
     </template>
   </prime-card>
