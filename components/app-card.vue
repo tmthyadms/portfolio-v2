@@ -20,6 +20,9 @@ const props = defineProps<Props>();
         <p class="text-[15px]">{{ props.description }}</p>
       </slot>
     </template>
+    <template v-if="!!useSlots()['footer']" #footer>
+      <slot name="footer"></slot>
+    </template>
   </prime-card>
 </template>
 
