@@ -11,5 +11,5 @@
 }
 
 :deep(.p-card-footer) {
-  @apply mt-auto;
+  @apply pt-1 sm:pt-2;
 }
