@@ -22,6 +22,9 @@ const events = ref(schools);
               {{ item.grade.type }}: {{ item.grade.value }}
             </p>
           </template>
+          <template #footer>
+            <app-chip :label="item.date" />
+          </template>
         </app-card>
       </template>
     </prime-timeline>
