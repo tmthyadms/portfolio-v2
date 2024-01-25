@@ -3,7 +3,7 @@
     "school": "Management and Science University",
     "degree": "Bachelor's degree",
     "field": "Computer Science",
-    "date": "Feb 2021",
+    "date": "Jan 2024",
     "grade": {
       "type": "CGPA",
       "value": "3.82/4.00"
@@ -14,7 +14,7 @@
     "school": "Universiti Teknologi PETRONAS",
     "degree": "Foundation degree",
     "field": "Computer Science",
-    "date": "Mac 2019",
+    "date": "Mac 2021",
     "grade": {
       "type": "CGPA",
       "value": "3.86/4.00"
@@ -25,7 +25,7 @@
     "school": "SMK Tansau",
     "degree": "Secondary education",
     "field": "Pure Science",
-    "date": "Jan 2014",
+    "date": "Dec 2018",
     "grade": {
       "type": "SPM",
       "value": "8A 1B"
