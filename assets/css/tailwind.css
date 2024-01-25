@@ -22,22 +22,18 @@
   @tailwind utilities;
 
   @layer components {
-    .p-button {
-      @apply gap-2;
-    }
-
     .skeleton {
       @apply h-4 w-full animate-pulse rounded bg-surface-d;
+    }
+
+    .p-button {
+      @apply gap-x-2;
     }
   }
 
   @layer utilities {
-    .p-button-sm {
-      @apply h-8 px-3;
-    }
-
-    .p-button-sm.p-button-square {
-      @apply h-8 w-8 p-0;
+    .app-ring {
+      @apply ring-surface-100 dark:ring-surface-50 ring-1;
     }
 
     .mask {
@@ -50,8 +46,32 @@
       mask-image: url("@/assets/images/mask-squircle.svg");
     }
 
-    .app-ring {
-      @apply ring-1 ring-gray-200 dark:ring-gray-800;
+    .p-button {
+      @apply shadow-sm;
+    }
+
+    .p-button-sm {
+      @apply h-8 px-3;
+    }
+
+    .p-button-sm.p-button-square {
+      @apply h-8 w-8 p-0;
+    }
+
+    .p-button-link {
+      @apply shadow-none;
+    }
+
+    .p-button-contrast {
+      @apply bg-surface-900 border-surface-900 hover:bg-surface-800 hover:border-surface-800;
+    }
+
+    .p-button-outlined {
+      @apply border-0 ring-1 ring-inset;
+    }
+
+    .p-button-secondary.p-button-outlined {
+      @apply ring-surface-200 dark:ring-surface-100 bg-surface-b text-content hover:bg-surface-c dark:bg-surface-c dark:hover:bg-surface-d;
     }
   }
 }
