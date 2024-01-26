@@ -58,7 +58,7 @@ const previousIcon = computed(() =>
       :num-scroll="1"
       :responsive-options="responsiveOptions"
       :orientation="orientation"
-      vertical-view-port-height="490px"
+      vertical-view-port-height="500px"
       :autoplay-interval="3000"
       circular
       class="max-w-80 sm:max-w-xl lg:max-w-screen-lg 2xl:max-w-screen-2xl"
@@ -71,7 +71,7 @@ const previousIcon = computed(() =>
           :category="data.category"
           :image="data.image"
           :to="data.to"
-          class="m-2"
+          class="m-2 max-sm:m-0.5"
         />
       </template>
       <template #nexticon>
@@ -87,12 +87,24 @@ const previousIcon = computed(() =>
 <style scoped>
 :deep(.p-carousel-prev),
 :deep(.p-carousel-next) {
-  @apply ring-surface-200 dark:ring-surface-100 bg-surface-b ring-1 ring-inset dark:bg-surface-c;
+  @apply bg-surface-b ring-1 ring-inset ring-surface-200 dark:bg-surface-c dark:ring-surface-100;
 }
 
 :deep(.p-carousel-prev:hover),
 :deep(.p-carousel-next:hover) {
   @apply bg-primary/10 text-primary ring-primary ring-opacity-50;
+}
+
+:deep(.p-carousel-items-content) {
+  @apply relative max-sm:py-2 md:px-0.5;
+}
+
+:deep(.p-carousel-items-content::before) {
+  @apply absolute top-0 z-10 h-3 w-full bg-gradient-to-b from-surface content-[''] md:left-0 md:h-full md:w-3 md:bg-gradient-to-r;
+}
+
+:deep(.p-carousel-items-content::after) {
+  @apply absolute bottom-0 z-10 h-3 w-full bg-gradient-to-t from-surface content-[''] md:right-0 md:h-full md:w-3 md:bg-gradient-to-l;
 }
 
 :deep(.p-carousel-indicators) {
