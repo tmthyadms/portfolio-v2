@@ -2,10 +2,26 @@
 import socials from "@/assets/data/socials.json";
 
 const items = ref([
-  { label: "About", url: "#about" },
-  { label: "Experience", url: "#experience" },
-  { label: "Education", url: "#education" },
-  { label: "Projects", url: "#projects" },
+  {
+    label: "About",
+    icon: "ph:baseball-cap-duotone",
+    url: "#about",
+  },
+  {
+    label: "Experience",
+    icon: "ph:briefcase-duotone",
+    url: "#experience",
+  },
+  {
+    label: "Education",
+    icon: "ph:graduation-cap-duotone",
+    url: "#education",
+  },
+  {
+    label: "Projects",
+    icon: "ph:rocket-launch-duotone",
+    url: "#projects",
+  },
 ]);
 
 // Logo Scroll
@@ -16,7 +32,7 @@ function scrollToTop() {
 // Header's Shadow
 onMounted(() => {
   const header = document.getElementById("header")!;
-  const shadowClass = "shadow";
+  const shadowClass = "shadow-sm";
   addEventListener("scroll", () => {
     if (scrollY > 0) header.classList.add(shadowClass);
     else header.classList.remove(shadowClass);
@@ -83,7 +99,10 @@ function switchTheme() {
         </div>
       </template>
       <template #menubuttonicon>
-        <icon name="mdi:menu" />
+        <icon name="ph:list" />
+      </template>
+      <template #itemicon="{ item }">
+        <icon :name="item.icon!" class="p-menuitem-icon" size="1.25rem" />
       </template>
       <template #end>
         <prime-toggle-button
@@ -116,18 +135,35 @@ function switchTheme() {
 }
 
 :deep(.p-menubar-root-list) {
-  @apply mx-auto lg:gap-8;
+  @apply mx-auto shadow-sm lg:gap-8 lg:shadow-none;
 }
 
 :deep(.p-menuitem-content:hover) {
   @apply bg-transparent;
 }
 
-:deep(.p-menuitem-text) {
-  @apply transition duration-300;
+/* selector taken from devtools */
+.p-menubar
+  :deep(
+    .p-menuitem:not(.p-highlight):not(.p-disabled).p-focus > .p-menuitem-content
+  ) {
+  @apply bg-transparent;
 }
 
-:deep(.p-menuitem-content:hover .p-menuitem-text) {
+:deep(.p-menuitem-link) {
+  @apply gap-x-2;
+}
+
+:deep(.p-menuitem-icon) {
+  @apply lg:hidden;
+}
+
+:deep(.p-menuitem-text, .p-menuitem-icon) {
+  @apply transition duration-200;
+}
+
+:deep(.p-menuitem:hover .p-menuitem-text),
+:deep(.p-menuitem:hover .p-menuitem-icon) {
   @apply text-primary;
 }
 
