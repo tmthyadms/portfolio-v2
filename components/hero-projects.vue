@@ -100,11 +100,11 @@ const previousIcon = computed(() =>
 }
 
 :deep(.p-carousel-items-content::before) {
-  @apply absolute top-0 z-10 h-3 w-full bg-gradient-to-b from-surface content-[''] md:left-0 md:h-full md:w-3 md:bg-gradient-to-r;
+  @apply absolute top-0 z-10 h-3 w-full bg-gradient-to-b from-surface to-95% content-[''] md:left-0 md:h-full md:w-3 md:bg-gradient-to-r;
 }
 
 :deep(.p-carousel-items-content::after) {
-  @apply absolute bottom-0 z-10 h-3 w-full bg-gradient-to-t from-surface content-[''] md:right-0 md:h-full md:w-3 md:bg-gradient-to-l;
+  @apply absolute bottom-0 z-10 h-3 w-full bg-gradient-to-t from-surface to-95% content-[''] md:right-0 md:h-full md:w-3 md:bg-gradient-to-l;
 }
 
 :deep(.p-carousel-indicators) {
