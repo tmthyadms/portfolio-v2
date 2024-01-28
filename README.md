@@ -1,75 +1,9 @@
-# Nuxt 3 Minimal Starter
+# Portfolio v2
+The revamped version of my [initial portfolio](https://github.com/tmthyadms/portfolio).
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## Website
+Check it out [here](https://www.tmthyadms.com).
 
-## Setup
-
-Make sure to install the dependencies:
-
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Screenshots
+<a href=""><img alt="Portfolio in light mode" width="720" src="https://github.com/tmthyadms/portfolio-v2/assets/72775553/411846aa-2490-4243-8af7-b3fec3a4aafa" /></a>
+<a href=""><img alt="Portfolio in dark mode" width="720" src="https://github.com/tmthyadms/portfolio-v2/assets/72775553/b224a1a2-fec0-4432-aff3-e2d77a62ec2d" /></a>
