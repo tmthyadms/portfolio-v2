@@ -5,7 +5,7 @@
       once
       icon="ph:briefcase-duotone"
       title="Frontend Support"
-      subtitle="Benefit Solutions Pte Ltd"
+      subtitle="Benefit Solutions Asia Sdn Bhd"
       class="duration-1000"
     >
       <template #content>
