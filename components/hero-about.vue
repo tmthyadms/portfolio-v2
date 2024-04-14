@@ -21,8 +21,8 @@ onMounted(() => {
     </template>
     <template #title>
       <h1
-        id="greet"
         class="text-center font-serif text-3xl sm:text-4xl lg:text-5xl"
+        id="greet"
       >
         <div
           class="skeleton h-9 w-[274px] sm:h-10 sm:w-[329px] lg:h-12 lg:w-[438px]"
@@ -31,23 +31,22 @@ onMounted(() => {
     </template>
     <template #description>
       <p class="mt-4 text-center text-lg text-content">
-        A final year Computer Science student with expertize in web development
-        using <em>Vue.js</em>, <em>Tailwind CSS</em>, and <em>Bootstrap</em>,
-        <wbr />as well as experienced in mobile development using
-        <em>Flutter</em>.
+        A recent Computer Science graduate with expertise in web development
+        using Vue.js and Tailwind CSS. Experience in mobile app development
+        using Flutter and desktop app development using .NET.
       </p>
     </template>
     <template #links>
-      <a v-ripple href="resume.pdf" target="_blank" class="p-ripple p-button">
+      <a class="p-ripple p-button" v-ripple href="resume.pdf" target="_blank">
         <icon name="ph:rocket-launch-duotone" size="1.25rem" />
         See resume
       </a>
       <span>or</span>
       <a
+        class="p-ripple p-button p-button-link px-0 hover:underline"
         v-ripple
         href="resume.pdf"
         download="timothy-resume.pdf"
-        class="p-ripple p-button p-button-link px-0 hover:underline"
         >grab a copy</a
       >
     </template>
