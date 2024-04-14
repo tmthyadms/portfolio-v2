@@ -1,0 +1,37 @@
+[
+  {
+    "role": {
+      "name": "Software Engineer",
+      "type": "Full Time"
+    },
+    "company": "MiLA Asia Sdn Bhd",
+    "description": [
+      "Maintained desktop application that utilizes .NET framework and Syncfusion library.",
+      "Collaborated with civil engineers to address bug reports and implement enhancements for various construction software solutions."
+    ],
+    "date": {
+      "start": "Apr 2024",
+      "end": "Present"
+    },
+    "resigned": false
+  },
+  {
+    "role": {
+      "name": "Frontend Support",
+      "type": "Internship"
+    },
+    "company": "Benefit Solutions Asia Sdn Bhd",
+    "description": [
+      "Resolved ad-hoc frontend issues and developed user interface components to optimize user experience and enhance web app functionality that utilizes Nuxt framework and Bootstrap library.",
+      "Localized web content into multiple languages Vue I18n to broaden accessibility.",
+      "Built an end-to-end (E2E) testing using Playwright for efficient quality assurance processes.",
+      "Developed a custom Playwright wrapper to streamline API interactions, alongside implementing a REST API for configuring the E2E test environment.",
+      "Implemented sophisticated modules, e.g., form fillers, and extended Day.js library into a plugin to streamline testing procedures and improve date and time handling accuracy."
+    ],
+    "date": {
+      "start": "Aug 2023",
+      "end": "Jan 2024"
+    },
+    "resigned": true
+  }
+]
