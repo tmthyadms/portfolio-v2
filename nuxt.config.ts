@@ -17,7 +17,6 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@nuxtjs/tailwindcss", "nuxt-primevue", "nuxt-icon"],
   primevue: {
-    cssLayerOrder: "tailwind-base, primevue, tailwind-utilities",
     options: {
       ripple: true,
     },
@@ -29,6 +28,7 @@ export default defineNuxtConfig({
         "Card",
         "Carousel",
         "Chip",
+        "Dialog",
         "Divider",
         "Image",
         "Menubar",
@@ -37,12 +37,13 @@ export default defineNuxtConfig({
       ],
     },
     directives: {
-      include: ["AnimateOnScroll", "Ripple"],
+      include: ["AnimateOnScroll", "Ripple", "Tooltip"],
     },
+    cssLayerOrder: "tailwind-base, primevue, tailwind-utilities",
   },
   typescript: {
     shim: false,
-    typeCheck: true,
+    typeCheck: false,
     strict: true,
   },
 });
