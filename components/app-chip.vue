@@ -9,8 +9,8 @@ const isPrimary = computed(() => props.severity === "primary");
 
 <template>
   <prime-chip
-    :label="props.label"
     class="chip-ring"
+    :label="props.label"
     :class="{ 'chip-primary chip-ring-primary': isPrimary }"
   />
 </template>
@@ -22,17 +22,5 @@ const isPrimary = computed(() => props.severity === "primary");
 
 :deep(.p-chip-text) {
   @apply text-xs font-medium;
-}
-
-.chip-primary {
-  @apply bg-primary-50 text-primary;
-}
-
-.chip-ring {
-  @apply ring-surface-200 dark:ring-surface-100 ring-1 ring-inset;
-}
-
-.chip-ring-primary {
-  @apply ring-primary ring-opacity-25;
 }
 </style>
