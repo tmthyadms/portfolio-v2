@@ -43,10 +43,10 @@ const previousIcon = computed(() =>
   <app-hero title="Projects" description="See what I've developed.">
     <template #links>
       <a
+        class="p-ripple p-button p-button-contrast"
         v-ripple
         href="https://github.com/tmthyadms?tab=repositories"
         target="_blank"
-        class="p-ripple p-button p-button-contrast"
       >
         <icon name="ph:folders-duotone" size="1.25rem" />
         See all projects
@@ -61,17 +61,16 @@ const previousIcon = computed(() =>
       vertical-view-port-height="490px"
       :autoplay-interval="3000"
       circular
-      class="max-w-80 sm:max-w-xl lg:max-w-screen-lg 2xl:max-w-screen-2xl"
     >
       <template #item="{ data }">
         <card-project
+          class="m-2"
           :title="data.title"
           :subtitle="data.subtitle"
           :description="data.description"
           :category="data.category"
           :image="data.image"
           :to="data.to"
-          class="m-2"
         />
       </template>
       <template #nexticon>
@@ -85,9 +84,13 @@ const previousIcon = computed(() =>
 </template>
 
 <style scoped>
+.p-carousel {
+  @apply max-w-80 sm:max-w-xl lg:max-w-screen-lg 2xl:max-w-screen-2xl;
+}
+
 :deep(.p-carousel-prev),
 :deep(.p-carousel-next) {
-  @apply ring-surface-200 dark:ring-surface-100 bg-surface-b ring-1 ring-inset dark:bg-surface-c;
+  @apply bg-surface-b ring-1 ring-inset ring-surface-200 dark:bg-surface-c dark:ring-surface-100;
 }
 
 :deep(.p-carousel-prev:hover),
