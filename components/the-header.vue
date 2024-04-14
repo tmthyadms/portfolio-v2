@@ -1,28 +1,10 @@
 <script setup lang="ts">
+import navigation from "@/assets/data/navigation.json";
 import socials from "@/assets/data/socials.json";
 
-const items = ref([
-  {
-    label: "About",
-    icon: "ph:baseball-cap-duotone",
-    url: "#about",
-  },
-  {
-    label: "Experience",
-    icon: "ph:briefcase-duotone",
-    url: "#experience",
-  },
-  {
-    label: "Education",
-    icon: "ph:graduation-cap-duotone",
-    url: "#education",
-  },
-  {
-    label: "Projects",
-    icon: "ph:rocket-launch-duotone",
-    url: "#projects",
-  },
-]);
+const emit = defineEmits(["openSearch"]);
+
+const items = ref(navigation);
 
 // Logo Scroll
 function scrollToTop() {
@@ -39,20 +21,30 @@ onMounted(() => {
   });
 });
 
+// Search Dialog
+function openSearch() {
+  emit("openSearch");
+}
+
 // Theme Switcher
 const theme = {
   light: {
     name: "viva-light",
     icon: "ph:sun-duotone",
+    tooltip: "Switch to dark mode",
   },
   dark: {
     name: "viva-dark",
     icon: "ph:moon-duotone",
+    tooltip: "Switch to light mode",
   },
 };
 const isDark = ref(false);
 const themeIcon = computed(() =>
   isDark.value ? theme.dark.icon : theme.light.icon,
+);
+const themeTooltip = computed(() =>
+  isDark.value ? theme.dark.tooltip : theme.light.tooltip,
 );
 watch(isDark, () => {
   switchTheme();
@@ -81,20 +73,20 @@ function switchTheme() {
 
 <template>
   <header
-    id="header"
     class="sticky top-0 z-[1] bg-surface-a/90 backdrop-blur transition-shadow duration-100"
+    id="header"
   >
-    <prime-menubar :model="items" mobileActive>
+    <prime-menubar :model="items" mobile-active>
       <template #start>
         <div
-          @click="scrollToTop"
           class="flex cursor-pointer items-center gap-1.5 transition-opacity duration-200 hover:opacity-60"
+          @click="scrollToTop"
         >
           <app-logo />
           <icon
+            class="text-blue-400"
             name="ph:circle-wavy-check-duotone"
             size="1.25rem"
-            class="text-blue-400"
           />
         </div>
       </template>
@@ -102,13 +94,26 @@ function switchTheme() {
         <icon name="ph:list" />
       </template>
       <template #itemicon="{ item }">
-        <icon :name="item.icon!" class="p-menuitem-icon" size="1.25rem" />
+        <icon class="p-menuitem-icon" :name="item.icon!" size="1.25rem" />
       </template>
       <template #end>
+        <prime-button
+          class="p-button-square justify-center"
+          v-tooltip.bottom="'Search'"
+          size="small"
+          plain
+          text
+          @click="openSearch"
+        >
+          <icon name="ph:magnifying-glass-duotone" size="1.25rem" />
+        </prime-button>
         <prime-toggle-button
           v-model="isDark"
-          off-label=""
-          class="p-button-sm p-button-square gap-0"
+          v-tooltip.bottom="themeTooltip"
+          :pt="{
+            root: 'p-button-sm p-button-square gap-0 border-0 justify-center',
+            label: 'hidden',
+          }"
         >
           <template #icon>
             <icon :name="themeIcon" size="1.25rem" />
@@ -116,10 +121,11 @@ function switchTheme() {
         </prime-toggle-button>
         <template v-for="social in socials">
           <a
+            class="p-ripple p-button p-button-sm p-button-square p-button-text p-button-plain p-button-icon-only"
+            v-tooltip.bottom="social.name"
             v-ripple
             :href="social.to"
             target="_blank"
-            class="p-ripple p-button p-button-sm p-button-square p-button-text p-button-plain p-button-icon-only"
           >
             <icon :name="social.icon" size="1.25rem" />
           </a>
@@ -173,9 +179,5 @@ function switchTheme() {
 
 .p-button {
   @apply shadow-none;
-}
-
-.p-togglebutton {
-  @apply border-0;
 }
 </style>

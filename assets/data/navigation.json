@@ -1,0 +1,76 @@
+[
+  {
+    "label": "About",
+    "description": "A final year Computer Science student with expertize in web development using Vue.js, Tailwind CSS, and Bootstrap, as well as experienced in mobile development using Flutter.",
+    "icon": "ph:baseball-cap-duotone",
+    "url": "#about"
+  },
+  {
+    "label": "Experience",
+    "description": "See where I've worked.",
+    "icon": "ph:briefcase-duotone",
+    "url": "#experience",
+    "children": [
+      {
+        "label": "Software Engineer",
+        "description": "MiLA Asia Sdn Bhd"
+      },
+      {
+        "label": "Frontend Support",
+        "description": "Benefit Solutions Pte Ltd"
+      }
+    ]
+  },
+  {
+    "label": "Education",
+    "description": "See where I've studied.",
+    "icon": "ph:graduation-cap-duotone",
+    "url": "#education",
+    "children": [
+      {
+        "label": "Management and Science University",
+        "description": "Bachelor's degree"
+      },
+      {
+        "label": "Universiti Teknologi PETRONAS",
+        "description": "Foundation degree"
+      },
+      {
+        "label": "SMK Tansau",
+        "description": "Secondary education"
+      }
+    ]
+  },
+  {
+    "label": "Projects",
+    "description": "See what I've built.",
+    "icon": "ph:rocket-launch-duotone",
+    "url": "#projects",
+    "children": [
+      {
+        "label": "Digital Portfolio v2",
+        "description": "The revamped version of Digital Portfolio."
+      },
+      {
+        "label": "Jobzone",
+        "description": "An employment website to evaluate fraudulent job posting using machine learning."
+      },
+      {
+        "label": "LockNRoll",
+        "description": "A home security mobile app to control a custom-built smart door lock using Firebase services."
+      },
+      {
+        "label": "EyeBuddy",
+        "description": "A mobile app to detect dry eyes' syndromes using convolutional neural network (CNN)."
+      },
+      {
+        "label": "Digital Portfolio",
+        "description": "A website to showcase my works and skills."
+      },
+      {
+        "label": "Sentinel",
+        "description": "An online assessment website to proctor students using neural network."
+      }
+    ]
+  }
+]
