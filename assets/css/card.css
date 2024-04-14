@@ -2,6 +2,10 @@
   @apply flex flex-col overflow-hidden;
 }
 
+:deep(.p-card-subtitle) {
+  @apply mb-0;
+}
+
 :deep(.p-card-header) {
   @apply px-4 pb-1 pt-5 sm:px-6 sm:pb-0 sm:pt-6;
 }
@@ -11,5 +15,5 @@
 }
 
 :deep(.p-card-footer) {
-  @apply pt-1 sm:pt-2;
+  @apply pt-0;
 }

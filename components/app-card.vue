@@ -11,10 +11,12 @@ const props = defineProps<Props>();
 <template>
   <prime-card class="app-ring shadow">
     <template v-if="props.icon" #header>
-      <Icon :name="props.icon" size="2.5rem" class="text-primary" />
+      <Icon class="text-primary" :name="props.icon" size="2.5rem" />
     </template>
     <template #title>{{ props.title }}</template>
-    <template v-if="props.subtitle" #subtitle>{{ props.subtitle }}</template>
+    <template v-if="props.subtitle || !!useSlots()['subtitle']" #subtitle>
+      <slot name="subtitle">{{ props.subtitle }}</slot>
+    </template>
     <template #content>
       <slot name="content">
         <p class="text-[15px]">{{ props.description }}</p>
