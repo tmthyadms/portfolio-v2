@@ -4,11 +4,39 @@
   @layer base {
     html {
       scroll-behavior: smooth;
+      @apply scrollbar scrollbar-thumb-surface-100 scrollbar-thumb-rounded-full scrollbar-w-3 dark:scrollbar-thumb-surface-50;
     }
 
     body {
       @apply bg-surface;
     }
+
+    ::marker {
+      @apply text-muted;
+    }
+
+    ::selection {
+      @apply bg-primary/60;
+    }
+  }
+}
+
+@layer primevue {
+  .p-tooltip-arrow {
+    @apply hidden;
+  }
+
+  /* selector taken from devtools */
+  .p-tooltip .p-tooltip-text {
+    @apply chip-ring bg-surface-b px-2 py-1 text-xs text-content shadow dark:bg-surface-c;
+  }
+
+  .p-dialog {
+    @apply min-h-screen w-full overflow-hidden rounded-none border-0 bg-surface-a text-content shadow-xl sm:h-[28rem] sm:min-h-0 sm:max-w-3xl sm:rounded-lg;
+  }
+
+  .p-dialog-mask {
+    @apply bg-surface-c/75 dark:bg-surface-d/75 sm:p-4;
   }
 }
 
@@ -22,6 +50,9 @@
   @tailwind utilities;
 
   @layer components {
+    .app-scrollbar {
+      @apply scrollbar scrollbar-thumb-surface-100 scrollbar-thumb-rounded-full scrollbar-w-2 dark:scrollbar-thumb-surface-50;
+    }
     .skeleton {
       @apply h-4 w-full animate-pulse rounded bg-surface-d;
     }
@@ -29,11 +60,19 @@
     .p-button {
       @apply gap-x-2;
     }
+
+    .chip-primary {
+      @apply bg-primary-50 text-primary;
+    }
+
+    .chip-ring {
+      @apply ring-1 ring-inset ring-surface-200 dark:ring-surface-100;
+    }
   }
 
   @layer utilities {
     .app-ring {
-      @apply ring-surface-100 dark:ring-surface-50 ring-1;
+      @apply ring-1 ring-surface-100 dark:ring-surface-50;
     }
 
     .mask {
@@ -52,10 +91,10 @@
 
     .p-button-sm {
       @apply h-8 px-3;
-    }
 
-    .p-button-sm.p-button-square {
-      @apply h-8 w-8 p-0;
+      &.p-button-square {
+        @apply h-8 w-8 p-0;
+      }
     }
 
     .p-button-link {
@@ -63,7 +102,7 @@
     }
 
     .p-button-contrast {
-      @apply bg-surface-900 border-surface-900 hover:bg-surface-800 hover:border-surface-800;
+      @apply border-surface-900 bg-surface-900 hover:border-surface-800 hover:bg-surface-800;
     }
 
     .p-button-outlined {
@@ -71,7 +110,11 @@
     }
 
     .p-button-secondary.p-button-outlined {
-      @apply ring-surface-200 dark:ring-surface-100 bg-surface-b text-content hover:bg-surface-c dark:bg-surface-c dark:hover:bg-surface-d;
+      @apply bg-surface-b text-content ring-surface-200 hover:bg-surface-c dark:bg-surface-c dark:ring-surface-100 dark:hover:bg-surface-d;
+    }
+
+    .chip-ring-primary {
+      @apply ring-primary ring-opacity-25;
     }
   }
 }
