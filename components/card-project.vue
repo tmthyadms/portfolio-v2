@@ -13,11 +13,21 @@ const props = defineProps<Props>();
 <template>
   <prime-card class="app-ring shadow">
     <template #header>
-      <prime-image :src="props.image" alt="" size="64" preview />
+      <PrimeImage
+        :src="props.image"
+        :alt="`${props.title}'s image'`"
+        size="64"
+        preview
+      >
+        <!-- TODO: fix primevue's image component documentation -->
+        <template #indicatoricon>
+          <icon name="ph:eye-duotone" size="1.25rem" />
+        </template>
+      </PrimeImage>
       <app-chip
+        class="mx-4 mt-5 sm:mx-5 sm:mt-6"
         :label="props.category"
         severity="primary"
-        class="mx-4 mt-5 sm:mx-5 sm:mt-6"
       />
     </template>
     <template #title>
@@ -31,10 +41,10 @@ const props = defineProps<Props>();
     </template>
     <template v-if="props.to" #footer>
       <a
+        class="p-ripple p-button p-button-sm p-button-secondary p-button-outlined"
         v-ripple
         :href="props.to"
         target="_blank"
-        class="p-ripple p-button p-button-sm p-button-secondary p-button-outlined"
         ><icon name="ph:bookmark-simple-duotone" /> Learn more
       </a>
     </template>
