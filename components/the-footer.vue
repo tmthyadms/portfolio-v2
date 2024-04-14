@@ -13,10 +13,10 @@ import socials from "@/assets/data/socials.json";
       <div class="flex justify-center gap-x-1.5 lg:order-2">
         <template v-for="social in socials">
           <a
+            class="p-ripple p-button p-button-sm p-button-square p-button-text p-button-plain p-button-icon-only"
             v-ripple
             :href="social.to"
             target="_blank"
-            class="p-ripple p-button p-button-sm p-button-square p-button-text p-button-plain p-button-icon-only"
           >
             <icon :name="social.icon" size="1.25rem" />
           </a>
@@ -24,10 +24,10 @@ import socials from "@/assets/data/socials.json";
       </div>
       <div class="mt-3 flex justify-center lg:order-1 lg:mt-0 lg:justify-start">
         <p class="text-sm text-content">
-          <icon
-            name="ph:star-duotone"
-            class="mb-0.5"
-          />&nbsp;<time>2024</time>&nbsp;<span>Timothy Adams</span>
+          <icon class="mb-0.5" name="ph:star-duotone" />&nbsp;<time
+            datetime="2024"
+            >2024</time
+          >&nbsp;<span>Timothy Adams</span>
         </p>
       </div>
     </div>
