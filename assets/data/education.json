@@ -6,9 +6,9 @@
     "date": "Jan 2024",
     "grade": {
       "type": "CGPA",
-      "value": "3.82/4.00"
+      "value": "3.84/4.00"
     },
-    "graduated": false
+    "graduated": true
   },
   {
     "school": "Universiti Teknologi PETRONAS",
