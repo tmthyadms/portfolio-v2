@@ -32,8 +32,9 @@ onMounted(() => {
     <template #description>
       <p class="mt-4 text-center text-lg text-content">
         A recent Computer Science graduate with expertise in web development
-        using Vue.js and Tailwind CSS. Experience in mobile app development
-        using Flutter and desktop app development using .NET.
+        using <em>Vue.js</em> and <em>Tailwind CSS</em>. Experience in mobile
+        app development using <em>Flutter</em> and desktop app development using
+        <em>.NET</em>.
       </p>
     </template>
     <template #links>
