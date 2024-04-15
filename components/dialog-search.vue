@@ -128,7 +128,7 @@ watch(searchInput, (newInput) => {
               name="ph:magnifying-glass-duotone"
               size="1.25rem"
             />
-            <p class="text-sm">
+            <p class="text-sm text-center">
               We couldn't find any items with that term. Please try again.
             </p>
           </div>
