@@ -22,9 +22,9 @@
     },
     "company": "Benefit Solutions Asia Sdn Bhd",
     "description": [
-      "Resolved ad-hoc frontend issues and developed user interface components to optimize user experience and enhance web app functionality that utilizes Nuxt framework and Bootstrap library.",
-      "Localized web content into multiple languages Vue I18n to broaden accessibility.",
-      "Built an end-to-end (E2E) testing using Playwright for efficient quality assurance processes.",
+      "Resolved ad-hoc frontend issues and developed user interface components to optimize user experience and enhance web app functionality that utilizes Nuxt and Bootstrap frameworks.",
+      "Localized web content into multiple languages using Vue I18n to broaden accessibility.",
+      "Built an end-to-end (E2E) automated testing using Playwright for efficient quality assurance processes.",
       "Developed a custom Playwright wrapper to streamline API interactions, alongside implementing a REST API for configuring the E2E test environment.",
       "Implemented sophisticated modules, e.g., form fillers, and extended Day.js library into a plugin to streamline testing procedures and improve date and time handling accuracy."
     ],
